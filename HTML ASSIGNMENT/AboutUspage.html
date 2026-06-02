@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sun Eco Travel Agency</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+.container {
+  width: 990px;
+  margin: auto;
+}
+
+/* Header */
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: aqua;
+  padding: 10px 20px;
+}
+.hd img {
+  height: 100px;
+}
+.hd .contact {
+  text-align: right;
+}
+.search-box {
+  margin-top: 5px;
+}
+.search-box input {
+  padding: 5px;
+}
+.search-box button {
+  padding: 5px 10px;
+  background: #ffeb99;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Navigation */
+.nav {
+  background: orange;
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+.nav ul li {
+  margin: 0 20px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.nav ul li.active a {
+  background: red;
+}
+.nav ul li a:hover {
+  background: aqua;
+}
+
+/* About Banner */
+.about-banner {
+  position: relative;
+  width: 100%;
+}
+.about-banner img {
+  width: 100%;
+  height: auto;
+}
+.about-text {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+.about-text h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Slider Buttons */
+.slider-buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.slider-buttons button {
+  background: red;
+  color: white;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.slider-buttons button:hover {
+  background: darkred;
+}
+
+/* Footer */
+.fot {
+  background: aqua;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.fot ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.fot ul li {
+  margin: 0 15px;
+}
+.fot ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fot p {
+  color: white;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sun Eco Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="hd">
+      <img src="Homepage/Logo1.png" alt="logo">
+      <div class="contact">
+        <p>Contact us on: <strong>062 598 7348</strong></p>
+        <div class="search-box">
+          <input type="text">
+          <button>Search</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <li><a href="Homepage.html">home</a></li>
+        <li><a href="Pricingpage.html">pricing</a></li>
+        <li class="active"><a href="AboutUspage.html">about us</a></li>
+        <li><a href="Gallerypage.html">gallery</a></li>
+        <li><a href="Contactuspage.html">contact us</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Banner Section -->
+    <section class="about-banner">
+      <img src="About Us/wallpaper.webp" alt="Airport at night">
+      <div class="about-text">
+        <h1>Welcome to Sun Eco.Travel, your gateway to see the world!</h1>
+        <p>Welcome to our airport, where your journey begins!<br>
+        We are dedicated to providing exceptional service and a seamless travel experience for everyone,<br>
+        whether you’re a frequent flyer or embarking on your first adventure.<br>
+        Our friendly staff is here to assist you with any needs, ensuring that your time with us is enjoyable and stress-free.<br>
+        We take pride in our commitment to safety and efficiency, making your travel as smooth as possible.<br>
+        Thank you for choosing us as your gateway to the world!</p>
+      </div>
+
+      <!-- Prev / Next buttons -->
+      <div class="slider-buttons">
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fot">
+      <ul>
+        <li><a href="Homepage.html">home</a></li>
+        <li><a href="Pricingpage.html">pricing</a></li>
+        <li><a href="AboutUspage.html">about us</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+      <p>copyright Sun Eco. Travel 2025</p>
+    </footer>
+  </div>
+</body>
+</html>

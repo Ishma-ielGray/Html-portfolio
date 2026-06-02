@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Ishma-iel Gray</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid #ddd;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #2c2c2c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2c2c2c;
+        }
+
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 5% 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto 4rem;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2.5rem;
+        }
+
+        .contact-form h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            background: #fafafa;
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            color: #2c2c2c;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2c2c2c;
+            background: white;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            padding: 0.8rem 2rem;
+            background: #2c2c2c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .submit-btn:hover {
+            background: #444;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+        }
+
+        .info-box h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .info-box p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .info-box a {
+            color: #2c2c2c;
+            text-decoration: underline;
+        }
+
+        .info-box a:hover {
+            color: #666;
+        }
+
+        .social-links-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .social-links-list li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .social-links-list li:last-child {
+            border-bottom: none;
+        }
+
+        .social-links-list a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .social-links-list a:hover {
+            color: #2c2c2c;
+        }
+
+        .availability {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            margin-top: 1rem;
+        }
+
+        .availability h4 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .availability p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #4caf50;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .faq-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .faq-section h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 2rem;
+            color: #2c2c2c;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 0.8rem;
+            color: #2c2c2c;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ishma-iel Gray</div>
+            <ul class="nav-links">
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="My Work.html">My Work</a></li>
+                <li><a href="About Me.html">About Me</a></li>
+                <li><a href="Contact Me.html" style="color: #2c2c2c;">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Let's Talk</h1>
+        <p>Have a project in mind? Want to collaborate? Or just want to say hello? I'd love to hear from you.</p>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <div class="info-box">
+                <h3>Email Me Directly</h3>
+                <p>If forms aren't your thing, feel free to email me directly at:</p>
+                <p><a href="mailto:your.email@example.com">ishmaeelgray7@gmail.com</a></p>
+                <p>I usually respond within 24 hours on weekdays.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Find Me Online</h3>
+                <ul class="social-links-list">
+                    <li><a href="https://github.com/142501169-netizen">GitHub - See my code</a></li>
+                    <li><a href="https://www.linkedin.com/in/ishma-iel-gray-6236b7399?trk=contact-info">LinkedIn - My Profile</a></li>
+                    <li><a href="https://www.instagram.com/ishmaielgray?igsh=MTNzYTBnZzNyMHAybw%3D%3D&utm_source=qr">Instagram - @ishmaielgray_</a></li>
+                    <li><a href="+27 82 453 4726">Contact Number - +27 82 453 4726</a></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Current Availability</h3>
+                <div class="availability">
+                    <h4><span class="status-indicator"></span>Available for Work</h4>
+                    <p>I'm currently taking on new projects. Typical response time is 2-3 business days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Common Questions</h2>
+        
+        <div class="faq-item">
+            <h3>What's your typical project timeline?</h3>
+            <p>It depends on the scope, but most small to medium projects take 2-6 weeks from start to finish. I always give a realistic timeline after we discuss the details. I'd rather give you an honest estimate than promise something unrealistic.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you work on existing projects?</h3>
+            <p>Absolutely. I've jumped into plenty of projects that needed fixes, updates, or new features. I'm comfortable working with existing codebases and can usually get up to speed pretty quickly.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can you help with design too?</h3>
+            <p>I can handle basic design work and layout decisions, but for larger projects with complex design needs, I usually recommend working with a dedicated designer. I'm happy to collaborate with your designer or can recommend someone if needed.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Ishma-iel Gray - Web Developer based in Cape Town, South Africa</p>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for your message! In a real implementation, this would send your message. For now, please email me directly at your.email@example.com');
+        });
+    </script>
+</body>
+</html>

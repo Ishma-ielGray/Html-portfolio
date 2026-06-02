@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sun Eco Travel Agency - Contact Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        width: 940px;
+  margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: #00e5ee;
+    }
+    .logo img {
+      height: 90px;
+    }
+    .contact-info {
+      font-size: 16px;
+    }
+    .contact-info b {
+      font-weight: bold;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .search-box input {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    .search-box button {
+      background: gold;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    /* Navigation */
+    nav {
+        width: 1000px;
+  margin: 0 auto;
+      background: #e98a00;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    nav a.active {
+      background: red;
+      padding: 2px 10px;
+      border-radius: 3px;
+    }
+    nav span {
+      color: white;
+      margin: 0 5px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        width: 1000px;
+  margin: 0 auto;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .contact-section h1 {
+      font-size: 36px;
+      color: black;
+      margin-bottom: 15px;
+    }
+    .contact-section p {
+      font-size: 22px;
+      color: black;
+      margin: 8px 0;
+    }
+    .contact-section b {
+      font-size: 24px;
+      color: white;
+    }
+
+    /* Form Section */
+    .form-section {
+        width: 940px;
+  margin: 0 auto;
+      background: #00e5ee;
+      padding: 20px;
+    }
+    .form-container { 
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 8px solid #f4e9e9;
+      border-bottom: 8px solid #f4e9e9;
+      padding: 20px 0;
+    }
+    .form-left, .form-right {
+      flex: 1;
+      margin: 10px;
+    }
+    .form-left label,
+    .form-right label {
+      display: block;
+      font-size: 22px;
+      color: white;
+      margin: 8px 0 4px;
+    }
+    .form-left input,
+    .form-right textarea {
+      width: 90%;
+      padding: 8px;
+      border: 1px solid black;
+      font-size: 16px;
+    }
+    .form-right textarea {
+      height: 180px;
+      resize: none;
+    }
+
+    /* Footer */
+    footer {
+        width: 960px;
+  margin: 0 auto;
+      background: #00e5ee;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    footer .copyright {
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="Homepage/Logo1.png" alt="Sun Eco Travel Logo">
+    </div>
+    <div class="contact-info">
+      Contact us on: <b>062 598 7348</b>
+      <div class="search-box">
+        <input type="text" placeholder="">
+        <button>Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="Homepage.html">home</a><span>|</span>
+    <a href="Pricingpage.html">pricing</a><span>|</span>
+    <a href="AboutUspage.html">about us</a><span>|</span>
+    <a href="Gallerypage.html">gallery</a><span>|</span>
+    <a href="Contactuspage.html" class="active">contact us</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>Thank you for reaching out to us.</p>
+    <p>For inquiries, please call us at <b>+27 62 598 7348</b><br>
+    locally or at 021 456 7348 internationally.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <div class="form-left">
+        <label>Name*</label>
+        <input type="text">
+        <label>Surname*</label>
+        <input type="text">
+        <label>Email*</label>
+        <input type="email">
+      </div>
+      <div class="form-right">
+        <label>Message</label>
+        <textarea></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="Homepage.html">home</a> |
+       <a href="Pricingpage.html">pricing</a> |
+      <a href="AboutUspage.html">about us</a> |
+      <a href="Gallerypage.html">gallery</a> |
+      <a href="Contactuspage.html">contact us</a>
+    </div>
+    <div class="copyright">
+      copyright Sun Eco. Travel 2025
+    </div>
+  </footer>
+
+</body>
+</html>

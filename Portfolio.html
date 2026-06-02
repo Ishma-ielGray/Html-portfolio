@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishma-iel Gray - Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid #ddd;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #2c2c2c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2c2c2c;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 6rem 5% 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #666;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #2c2c2c;
+            color: white;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .hero a:hover {
+            background: #444;
+        }
+
+        .projects {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 3rem;
+            color: #2c2c2c;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: #f5f5f5;
+            color: #666;
+            font-size: 0.85rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .about {
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 4rem 5%;
+        }
+
+        .about-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .skills {
+            list-style: none;
+        }
+
+        .skills li {
+            padding: 0.5rem 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .social-links a:hover {
+            color: #2c2c2c;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ishma-iel Gray</div>
+            <ul class="nav-links">
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="My Work.html">My Work</a></li>
+                <li><a href="About Me.html">About Me</a></li>
+                <li><a href="Contact Me.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm a web developer based in Cape Town.</h1>
+        <p>I build websites and web applications with a focus on clean code, thoughtful design, and user experience. Currently available for work.</p>
+        <a href="Contact Me.html">Let's Talk...</a>
+    </section>
+
+    <section class="projects" id="work">
+        <h2>Selected Work</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="js-emblem-orange-shield-and-white-text-vector.jpg" width="440px"/>
+                <div class="project-content">
+                    <h3>Javascript</h3>
+                    <p>My Javascript projects and code. Web Development & Programming.</p>
+                    <div class="project-tags">
+                        <span class="tag">Programming</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+              <img src="VS code/d3c7b91a-b285-4d1e-8429-5de1acc5f61e.jpg" width="500px">
+                <div class="project-content">
+                    <h3>Visual Studio Code Project</h3>
+                    <p>Website Designed and Coded in VS Code.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Visual Studio/1671191513_visual_studio_story.jpg" width="500px">
+                <div class="project-content">
+                    <h3>Visual Studio (My Website).</h3>
+                    <p>.NET Framework / .NET Core / WPF</p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">ASP.NET</span>
+                        <span class="tag">SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <div>
+                <h2>About Me</h2>
+                <p>I've been studying how to build web pages over a 1 year course at MSITA Web Development, working with groups and individually.</p>
+                <p>My approach is simple: understand the problem, build something that works, and make it look good. I believe the best websites are the ones that don't get in the way.</p>
+                <p>When I'm not coding, you'll find me trying out new coffee shops around Cape Town.</p>
+            </div>
+            <div>
+                <h2>What I Work With</h2>
+                <ul class="skills">
+                    <li>HTML/CSS</li> 
+                    <li>Git, GitHub</li>
+                    <li>Bootstrap</li>
+                    <li>Responsive Design</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Let's work together</p>
+        <ul class="social-links">
+            <li><a href="mailto:ishmaeelgray7@gmail.com">Get in Touch</a></li>
+            <li><a href="https://github.com/Ishma-ielGray">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ishma-iel-gray/">LinkedIn</a></li>
+        </ul>
+        <p style="margin-top: 2rem; font-size: 0.85rem;">© 2025 Ishma-iel Gray - Web Developer based in Cape Town, South Africa</p>
+    </footer>
+</body>
+</html>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
+

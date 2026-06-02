@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ishma-iel Gray</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid #ddd;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #2c2c2c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2c2c2c;
+        }
+
+        .page-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 5% 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .intro-section {
+            max-width: 1100px;
+            margin: 0 auto 4rem;
+            padding: 0 5%;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2.5rem;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 300px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .intro-text p {
+            color: #666;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .content-section {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 0 5%;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .content-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+        }
+
+        .content-box h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .content-box p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .skills-list li {
+            padding: 0.7rem 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .skills-list li:last-child {
+            border-bottom: none;
+        }
+
+        .timeline {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline li {
+            padding: 1rem 0;
+            border-left: 2px solid #e0e0e0;
+            padding-left: 1.5rem;
+            margin-left: 0.5rem;
+            position: relative;
+        }
+
+        .timeline li:before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 1.5rem;
+            width: 10px;
+            height: 10px;
+            background: #2c2c2c;
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            color: #2c2c2c;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .timeline-title {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-item {
+            padding: 1.5rem;
+            background: white;
+            border: 1px solid #e0e0e0;
+        }
+
+        .interest-item h4 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .interest-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .cta-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .cta-box p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #2c2c2c;
+            color: white;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .cta-box a:hover {
+            background: #444;
+        }
+
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ishma-iel Gray</div>
+            <ul class="nav-links">
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="My Work.html">My Work</a></li>
+                <li><a href="About Me.html" style="color: #2c2c2c;">About Me</a></li>
+                <li><a href="Contact Me.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>About Me</h1>
+    </section>
+
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="profile-image">
+                <img src="About Me/linkedin pfp.jpg" width="300px" height="300px" alt="Your Photo">
+            </div>            
+            <div class="intro-text">
+                <p>I'm a web developer based in Cape Town, South Africa. I've been building things for 1 year through the MSITA Web Development course now, mostly working with small web pages and startups.</p>
+                <p>What I love about this work is that every project is different. One week I'm building an online store, the next I'm working on a booking system or a content management tool. It keeps things interesting.</p>
+                <p>I didn't take the easy route into development. These days I spend most of my time with JavaScript and its various frameworks, but I'm comfortable working across the full stack. I like being able to take a project from concept to deployment without having to hand it off to someone else.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Experience & Skills</h2>
+        <div class="two-column">
+            <div class="content-box">
+                <h3>Work History</h3>
+                <ul class="timeline">
+                    <li>
+                        <span class="timeline-year">Jan 2025 - Dec 2025</span>
+                        <span class="timeline-title">Studying Web Development</span>
+                    </li>
+                    <li>
+                        <span class="timeline-year">2026 - Present</span>
+                        <span class="timeline-title">Student at Life Choices Coding Academy</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li>HTML, CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Python</li>
+                    <li>Git, GitHub</li>
+                    <li>Responsive & Front End Development</li>
+                    <li>.NET Framework / .NET Core</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>How I Work</h2>
+        <div class="content-box">
+            <p>I prefer to keep things simple and straightforward. Before writing any code, I spend time understanding what actually needs to be built and why. A lot of problems can be solved with simpler solutions than you'd think.</p>
+            <p>I'm big on communication. I'd rather over-communicate than leave clients or collaborators guessing. Regular updates, clear timelines, and being honest when something isn't working—that's how I like to operate.</p>
+            <p>Code quality matters to me. I write clean, documented code that other developers can understand. I also test things properly before calling them done. Rushing to finish just means fixing bugs later.</p>
+            <p>I'm always learning. This field changes fast, and what worked two years ago might not be the best approach today. I read documentation, follow other developers, and regularly try new tools to see what's worth adopting.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Outside of Work</h2>
+        <div class="interests">
+            <div class="interest-item">
+                <h4>Gaming</h4>
+                <p>In my free time you will catch me gaming, especially Forza Horizon.</p>
+            </div>
+            <div class="interest-item">
+                <h4>Driving & Music</h4>
+                <p>Going out on long drives and listening to music. My way of clearing my head when coding becomes too much.</p>
+            </div>
+            <div class="interest-item">
+                <h4>Coffee</h4>
+                <p>Probably spend too much time trying different coffee shops. Always looking for a good flat white.</p>
+            </div>
+            <div class="interest-item">
+                <h4>Movies</h4>
+                <p>I love a good movie, mainly comedy and action.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2>Let's Work Together</h2>
+            <p>I'm currently available for freelance projects. If you have something in mind, I'd love to hear about it.</p>
+            <a href="mailto:ishmaeelgray7@gmail.com">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Find me on <a href="https://github.com/Ishma-ielGray" style="color: #2c2c2c; text-decoration: underline;">GitHub</a>, <a href="https://www.linkedin.com/in/ishma-iel-gray/" style="color: #2c2c2c; text-decoration: underline;">LinkedIn</a>, or <a href="mailto:ishmaeelgray7@gmail.com" style="color: #2c2c2c; text-decoration: underline;">Email</a></p>
+        <p style="margin-top: 2rem; font-size: 0.85rem;">© 2025 Ishma-iel Gray - Web Developer based in Cape Town, South Africa</p>
+    </footer>
+</body>
+</html>

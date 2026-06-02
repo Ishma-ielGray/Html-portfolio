@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sun Eco Travel Agency</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+.container {
+  width: 990px;
+  margin: auto;
+}
+
+/* Header */
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: aqua;
+  padding: 10px 20px;
+}
+.hd img {
+  height: 100px;
+}
+.hd .contact {
+  text-align: right;
+}
+.search-box {
+  margin-top: 5px;
+}
+.search-box input {
+  padding: 5px;
+}
+.search-box button {
+  padding: 5px 10px;
+  background: #ffeb99;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Navigation */
+.nav {
+  background: orange;
+  text-align: center;
+  height: 70px;   /* fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  line-height: 40px;   /* keeps text centered */
+  padding: 10px 15px;  /* equal padding for all links */
+  border-radius: 5px;
+}
+
+/* Active tab */
+.nav ul li.active a {
+  background: red;
+}
+
+/* Pricing Cards */
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.card {
+  width: 32%;
+  background: linear-gradient(to bottom, orange, peachpuff);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 3px;
+}
+.card .title {
+  background: orange;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.card .red {
+  background: red;
+}
+.card form {
+  color: white;
+  font-size: 14px;
+}
+.card form label {
+  display: inline-block;
+  width: 90px;
+  margin: 5px 0;
+}
+.card form input {
+  padding: 5px;
+  margin: 5px 0;
+}
+.card form .small {
+  width: 40px;
+}
+.card button {
+  background: limegreen;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+}
+
+/* Footer */
+.fot {
+  background: aqua;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.fot ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.fot ul li {
+  margin: 0 15px;
+}
+.fot ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fot p {
+  color: white;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Sun Eco Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="hd">
+      <img src="Logo1.png" alt="logo">
+      <div class="contact">
+        <p>Contact us on: <strong>062 598 7348</strong></p>
+        <div class="search-box">
+          <input type="text">
+          <button>Search</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li class="active"><a href="pricing.html">pricing</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <!-- Domestic -->
+      <div class="card">
+        <h2 class="title red">Domestic</h2>
+        <img src="R (1).jpg" alt="Domestic Travel">
+        <form>
+          <label>Date</label><input type="text"><br>
+          <label>Return date</label><input type="text"><br>
+          <label>Departure</label><input type="text"><br>
+          <label>City</label><input type="text"><br>
+          <label>Prices</label><input type="text" value="ZAR: 8 500,00 to 18 400,50" readonly><br>
+          <label>Adults</label><input type="text" class="small">
+          <label>Kids</label><input type="text" class="small"><br>
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+
+      <!-- International -->
+      <div class="card">
+        <h2 class="title">International</h2>
+        <img src="wp6438928.webp" alt="International Travel">
+        <form>
+          <label>Date</label><input type="text"><br>
+          <label>Return date</label><input type="text"><br>
+          <label>Departure</label><input type="text"><br>
+          <label>Country</label><input type="text"><br>
+          <label>Prices</label><input type="text" value="ZAR: 25 080,00 to 56 218,00" readonly><br>
+          <label>Adults</label><input type="text" class="small">
+          <label>Kids</label><input type="text" class="small"><br>
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+
+      <!-- First Class -->
+      <div class="card">
+        <h2 class="title">First Class</h2>
+        <img src="337426.webp" alt="First Class Travel">
+        <form>
+          <label>Date</label><input type="text"><br>
+          <label>Return date</label><input type="text"><br>
+          <label>Departure</label><input type="text"><br>
+          <label>Country</label><input type="text"><br>
+          <label>Prices</label><input type="text" value="ZAR: 52 033,00 to 120 300,00" readonly><br>
+          <label>Adults</label><input type="text" class="small">
+          <label>Kids</label><input type="text" class="small"><br>
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fot">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="#">pricing</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+      <p>copyright Sun Eco. Travel 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
+
